@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-3cfb730f.js";/* empty css                      */import{P as a,t as i}from"./assets/vendor-238f9141.js";const c=document.querySelector("iframe"),e=new a(c);let o=!1;const r="videoplayer-current-time",n=localStorage.getItem(r);n&&e.setCurrentTime(parseFloat(n)).catch(t=>{t.name==="RangeError"&&e.setCurrentTime(0)});const m=i(function({seconds:t}){o||localStorage.setItem(r,t)},1e3),l=function(){localStorage.removeItem(r),o=!0};e.on("play",function(){o=!1});e.on("timeupdate",m);e.on("ended",l);
+//# sourceMappingURL=commonHelpers2.js.map
