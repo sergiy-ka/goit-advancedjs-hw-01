@@ -21,20 +21,7 @@ const createGallery = galleryItems
 
 gallery.insertAdjacentHTML('beforeend', createGallery);
 
-gallery.addEventListener('click', onGalleryClick);
-
 new SimpleLightbox(`.gallery a`, {
   captionsData: 'alt',
+  captionDelay: 250,
 });
-
-gallery.addEventListener('click', onGalleryClick);
-
-function onGalleryClick(event) {
-  event.preventDefault();
-
-  if (event.target.tagName === 'IMG' && event.target.closest('a')) {
-  } else {
-    event.preventDefault();
-    return;
-  }
-}
